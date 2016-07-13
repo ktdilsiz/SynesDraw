@@ -3,8 +3,8 @@
 
 int main()
 {
-    // create the window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+   // create the window
+   sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
    std::vector <sf::Vertex> lines;
    sf::Texture texture;
    sf::Sprite sprite;
@@ -12,7 +12,7 @@ int main()
 
    int mousedown = 0;
     // run the program as long as the window is open
-   window.setFramerateLimit(30);
+   window.setFramerateLimit(60);
 
     while (window.isOpen())
     {

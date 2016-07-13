@@ -3,14 +3,23 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    drawcontroller.cpp \
+    mousedrawer.cpp \
+    screenanalyzer.cpp \
+    soundgenerator.cpp
 
 LIBS += -L"$HOME/Libraries/C++/SFML-2.3.2/lib"
 
-CONFIG(release, debug|release): LIBS += -libsfml-audio -libsfml-graphics -libsfml-network -libsfml-window -libsfml-system
-
-CONFIG(debug, debug|release): LIBS += -libsfml-audio-d -libsfml-graphics-d -libsfml-network-d -libsfml-window-d -libsfml-system-d
+CONFIG(release, debug|release): LIBS += -lsfml-audio -lsfml-graphics -lsfml-network -lsfml-window -lsfml-system
+CONFIG(debug, debug|release): LIBS += -lsfml-audio -lsfml-graphics -lsfml-network -lsfml-window -lsfml-system
 
 INCLUDEPATH += "$HOME/Libraries/C++/SFML-2.3.2/include"
 DEPENDPATH += "$HOME/Libraries/C++/SFML-2.3.2/include"
+
+HEADERS += \
+    drawcontroller.h \
+    mousedrawer.h \
+    screenanalyzer.h \
+    soundgenerator.h
 
